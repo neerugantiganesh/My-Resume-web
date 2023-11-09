@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganesh Resume</title>
+</head>
+<body>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'poppins',sans-serif;
+    }
+    body{
+      background-color: #36a54ea0;
+    }
+    .container{
+      width: 800px;
+      margin-top: 400px;
+      height: 1000px;
+      position: absolute;
+      padding: 25px 5px;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background:#e8cba8;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px gray;
+    }
+    .container h1{
+      text-align: center;
+      font-size: 60px;
+      color: rgb(13, 13, 76)0, 0, 255;
+    }
+    .personal-Container{
+      position: relative;
+      width: 330px;
+      height: 92%;
+      top: 2%;
+      left: 1px;
+      background-color: rgb(115, 243, 243);
+      box-shadow: 5px 5px 10px gray;
+      border-radius: 10px;
+      
+    }
+    .pic{
+      position: relative;
+      width: 180px;
+      left: 20%;
+      top: 1%;
+      border-radius: 100%;
+      transition: 0.2s ease;
+    }
+    .pic:hover{
+      width: 190px;
+      left: 19%;
+      top: 1%;
+      position: relative;
+      border-radius: 100%;
+      box-shadow: 5px 5px 10px gray;
+      
+    }
+    .personal-Container h2{
+      position: relative;
+      left: 5%;
+      top: 3%;
+      font-family: 'BestermindRegular';
+      font-weight: 800;
+    }
+    .personal-Container pre{
+      margin-left: 18px;
+      margin-top: 10px;
+    }
+    .contact{
+      
+      position: relative;
+      top: 30px;
+      left: 10px;
+    }
+    .contact img{
+      /* position: relative; */
+      width: 40px;
+      /* display: flex; */
+      /* display: inline-block; */
+      vertical-align: middle;
+      margin-top: 7px;
+      vertical-align: auto;
+    }
+    .contact p{
+      display: flex;
+      /* margin-left: 50px; */
+      display: inline-block;
+    }
+    .contact pnum{
+      width: 25px;
+      background: transparent;
+      margin-top: 10px;
+    }
+     
+     .btnLin img{
+      width: 25px;
+      border-radius: 50px;
+      margin-top: 10px;
+    }
+    .github{
+      margin-top: 5px;
+      
+    }
+    .educational-Container{
+      width: 430px;
+      /* background-color: aliceblue; */
+      
+      height: 875px;
+      position: relative;
+      vertical-align: auto;
+      left: 44%;
+      bottom: 90%;
+      display: inline-block;
+      padding: 10px 10px 10px 10px;
+      transition: 0.2s ease;
+    }
+    .educational-Container:hover{
+      width: 430px;
+      background:#f0d9be;
+      box-shadow: 5px 10px 10px 5px gray;
+
+      height: 880px;
+      position: relative;
+      vertical-align: auto;
+      left: 44%;
+      bottom: 90%;
+      display: inline-block;
+      padding: 10px 10px 10px 10px;
+    }
+    .objective{
+      position: relative;
+      width: 100%;
+      height: 130px;
+      /* background-color: #e8cba8; */
+      border-radius: 10px;
+      transition: 0.2s ease;
+    }
+
+    .objective:hover{
+      position: relative;
+      width: 100%;
+      height: 132px;
+      background-color: rgb(245, 248, 169);
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px gray;
+    }
+    .education{
+      margin-top: 5px;
+      position: relative;
+      width: 100%;
+      height: 250px;
+      /* background-color: #e8cba8; */
+      transition: 0.2s ease;
+    }
+    .education:hover{
+      margin-top: 5px;
+      position: relative;
+      width: 100%;
+      height: 250px;
+      /* background-color: #e8cba8; */
+      background-color: rgb(245, 248, 169);
+      box-shadow: 5px 5px 10px gray;
+    }
+    .skills{
+      margin-top: 5px;
+      position: relative;
+      width: 100%;
+      height: 200px;
+      /* background-color: #e8cba8; */
+      transition: 0.2s ease;
+      border-radius: 10px;
+    }
+    .skills:hover{
+      margin-top: 5px;
+      position: relative;
+      width: 100%;
+      height: 202px;
+      /* background-color: #e8cba8; */
+      background-color: rgb(245, 248, 169);
+      transition: 0.2s ease;
+      box-shadow: 5px 5px 10px gray;
+    }
+    .skil1{
+      position: absolute;
+      /* background-color: rgb(255, 255, 255); */
+      width: 46%;
+      height: 80%;
+      margin: 10px 10px 10px 10px;
+    }
+    .skill2{
+      position: absolute;
+      /* background-color: rgb(255, 255, 255); */
+      width: 48%;
+      height: 80%;
+      left: 48%;
+      margin: 10px 10px 10px 10px;
+    }
+    .projects{
+      margin-top: 5px;
+      position: relative;
+      width: 100%;
+      height: 200px;
+      /* background-color: #e8cba8; */
+      line-height: 25px;
+    }
+    .projects:hover{
+      margin-top: 5px;
+      position: relative;
+      width: 100%;
+      height: 202px;
+      /* background-color: #e8cba8; */
+      line-height: 25px;
+      background-color: rgb(245, 248, 169);
+      transition: 0.2s ease;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px gray;
+    }
+    .internship{
+      margin-top: 50px;
+      position: relative;
+      width: 100%;
+      height: 300px;
+      /* background-color: #e8cba8; */
+      border-radius: 10px;
+    }
+
+    .internship:hover{
+      margin-top: 50px;
+      position: relative;
+      width: 100%;
+      height: 300px;
+      /* background-color: #e8cba8; */
+      background-color: rgb(245, 248, 169);
+      transition: 0.2s ease;
+      box-shadow: 5px 5px 10px gray;
+    }
+    
+  </style>
+  
+  <div class="container">
+    <h1>RESUME</h1>
+    <div class="personal-Container">
+      <img src="pics/passport.jpeg" class="pic">
+      <h2>NEERUGANTI GANESH</h2><br>
+      <pre>Web Developer</pre>
+      <div class="contact">
+        <img src="pics/email.png">
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"><p>neerugantiganesh2222@gmail.com</p></a><br>
+        <img src="pics/phone.png" class="pnum">
+        <p>6304263890</p><br>
+        
+          <img src="pics/linkedin.png">
+        <a href="https://www.linkedin.com/in/neeruganti-ganesh-34784b234/" target="_blank"><p>LinkedIn Profile</p></a><br>
+        <img src="pics/github.png" class="github">
+        <a href="https://github.com/" target="_blank"><p>github profile</p></a>
+      </div>
+      <div class="internship" style="line-height: 30px;">
+        <h3 style="margin-left: 15px;"><u>Internships</u></h3>
+        &nbsp;&rarr; Java Full Stack Development at Kodnest<br>
+        &nbsp;&rarr; Python Full Stack Development at &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pantech eLearning<br>
+        &nbsp;&rarr;Java Full Stack at Dream Factory Portal<br><br>
+        <h3> &nbsp; &nbsp;<u>Languages Known</u></h3>
+        &nbsp;&rarr; English<br>
+        &nbsp;&rarr; Telugu<br>
+      </div>
+    </div>
+    <div class="educational-Container">
+      <div class="objective">
+        <h3 style="color: rgb(28, 26, 54);"><u>CAREER OBJECTIVE</u></h3><br>
+        <p style="padding-left: 10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To work for a growing company that will allow
+          me to improve my abilities and skills in favour
+          of my company mission and to secure a
+          challenging position in a reputed organization
+          to expand my knowledge and skills.</p>
+      </div>
+      <div class="education">
+        <h3 style="margin-top: 10px; padding-bottom: 10px;"><u>EDUCATION</u></h3>
+        <table border>
+          <th>Qualification</th>
+          <th>Institution</th>
+          <th>year of passed out</th>
+          <th>CGPA</th>
+
+          <tr>
+            <td>B Tech-Mech</td>
+            <td>Sri Krishnadevaraya University College of Engineering and Technology-Anantapur</td>
+            <td>2023</td>
+            <td>8.0</td>
+          </tr>
+
+          <tr>
+            <td>Intermediate</td>
+            <td>Vidhyanidhi Junior College-Hindupur</td>
+            <td>2019</td>
+            <td>9.57</td>
+          </tr>
+
+          <tr>
+            <td>S.S.C</td>
+            <td>Z.P High School-Somandepalli</td>
+            <td>2017</td>
+            <td>8.8</td>
+          </tr>
+        </table>
+      </div><br>
+      <div class="skills">
+        <h3><u>Skills</u></h3>
+        <div class="skil1" style="line-height: 30px;">
+          &bull; <b>BackEnd Technologies</b>
+          &rarr; java<br>
+          &rarr; Dart<br>
+          &rarr; Java Script<br>
+          &rarr; SQL<br>
+        </div>
+        <div class="skill2" style="line-height: 30px;">
+          &nbsp;&nbsp;&bull; <b>FrontEnd Technologies</b>
+          &rarr; Html<br>
+          &rarr; CSS<br>
+         
+        </div>
+      </div>
+      <div class="projects">
+        <h3 style="padding-bottom: 10px;"><u>Projects</u></h3>
+        &rarr; PG App (under working)<br>
+        &rarr;  <a href="https://neerugantiganesh.github.io/notes-app/" target="_blank">To-Do List</a><br>
+        &rarr; <a href="https://neerugantiganesh.github.io/notes-app/" target="_blank">NotesApp</a><br>
+        &rarr; <a href="https://neerugantiganesh.github.io/Age-Calculater/">Age Calculater</a><br>
+        &rarr; <a href="https://neerugantiganesh.github.io/Quiz-App/">Quiz App</a><br>
+        &rarr; <a href="https://neerugantiganesh.github.io/QR-Code/">QR code generator</a><br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
